@@ -1,0 +1,33 @@
+ /* ============================================
+           NAVIGATION BAR (already built)
+           ============================================ */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0.8rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #E87A5D !important;
+        }
+
+        .navbar-brand i {
+            margin-right: 8px;
+        }
+
+        .nav-link {
+            color: #2C3E50 !important;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #E87A5D !important;
+        }
+
+        .nav-link i {
+            margin-right: 6px;
+        }
