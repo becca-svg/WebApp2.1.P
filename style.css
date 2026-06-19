@@ -88,6 +88,15 @@
             background-color: #d45a3a;
             border-color: #d45a3a;
         }
+        .hero h2{
+            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            
+        }
+
 
          /* ============================================
            FEATURED PETS GRID
@@ -183,7 +192,41 @@
             background-color: #E87A5D;
             border-color: #E87A5D;
             color: white;
+            
         }
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about-section {
+             margin-bottom: 60px;
+        }
+        .about-section h2 {
+            font-weight: 700;
+                font-size: 42px;
+
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .about-section p {
+            color: #6c757d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* ============================================
+          MISSION SECTION
+           ============================================ */
+        .mission-section {
+            color: #6c757d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }   
+        
 
 
          /* ============================================
@@ -230,44 +273,6 @@
             margin-bottom: 0;
         }
 
-        /* ============================================
-           CTA BANNER
-           ============================================ */
-        .cta-banner {
-            background: linear-gradient(135deg, #E87A5D, #d45a3a);
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 4rem 2rem;
-            border-radius: 30px;
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .cta-banner h2 {
-            font-weight: 800;
-            font-size: 2.2rem;
-        }
-
-        .cta-banner p {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
-        .cta-banner .btn {
-            padding: 14px 40px;
-            font-weight: 700;
-            border-radius: 50px;
-            background-color: white;
-            color: #E87A5D;
-            border: none;
-        }
-
-        .cta-banner .btn:hover {
-            background-color: #f8f9fa;
-            transform: scale(1.02);
-        }
-        
 
           /* ============================================
            FOOTER
@@ -346,3 +351,107 @@
             color: rgba(255,255,255,0.5);
             font-size: 0.85rem;
         }
+
+        /* Testimonial Preview Styles */
+.testimonial-preview {
+    padding: 20px 0;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+}
+
+.quote-icon {
+    font-size: 40px;
+    color: #2C3E50;
+    opacity: 0.2;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2C3E50;
+    padding: 2px;
+}
+
+.user-name {
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.testimonial-text {
+    font-size: 18px;
+    color: #4a4a5a;
+    line-height: 1.8;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.pet-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.view-stories-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-color: #2C3E50;
+    color: #2C3E50;
+}
+
+.view-stories-btn:hover {
+    background: #2C3E50;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 25px;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+    }
+    
+    .user-avatar {
+        width: 55px;
+        height: 55px;
+    }
+}
