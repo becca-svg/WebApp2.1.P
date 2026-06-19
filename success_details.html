@@ -3,12 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <title>Paws & Found | reuniting lost pets with their families</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+         /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 992px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .page-hero p {
+                font-size: 1rem;
+            }
+
+            .story-card-img {
+                height: 200px;
+            }
+
+            .testimonial-quote {
+                padding: 2rem 1.5rem;
+            }
+
+            .testimonial-quote blockquote {
+                font-size: 1rem;
+            }
+
+            .mini-stats .stat-item {
+                margin-bottom: 1rem;
+            }
+
+            .footer {
+                padding: 2rem 0 1rem;
+                border-radius: 20px 20px 0 0;
+            }
+            
+            .footer .col-md-4 {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero {
+                padding: 3rem 0;
+                border-radius: 0 0 20px 20px;
+            }
+            
+            .page-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .story-card-body .story-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -52,15 +115,225 @@
         </div>
     </nav>
 
-
-    <div class ="container">
-        <div class ="content-holder">
-            <h1>🐾 Welcome to Paws & Found</h1>
-            <p class ="lead">Working as a community to reunite lost pets with their families</p>
-            <hr>
-            
+    <section class="success-hero">
+        <div class="container">
+            <h1>Happy Reunions</h1>
+            <p>Every success story is a reminder of why we do what we do. Here are some of the families we've helped reunite.</p>
         </div>
-    </div>
+    </section>
+
+    <section class="container stats-section py-5">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <h3>1,247</h3>
+                        <p>Pets Reunited</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <h3>98%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <h3>4.8</h3>
+                        <p>Avg. Rating</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <h3>24hrs</h3>
+                        <p>Fastest Reunion</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+     <section class="container">
+        <div class="row">
+            <!-- Story 1 - Rover -->
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <div class="ratio ratio-4x3">
+                        <img src="images/rover.jpg" class="story-card-img" alt="Golden Retriever reunited">
+                    </div>
+                    <div class="story-card-body">
+                        <span class="badge-reunited"><i class="fas fa-check-circle"></i> Reunited!</span>
+                        <h3>Rover's Journey Home</h3>
+                        <p class="story-meta">
+                            <i class="fas fa-map-marker-alt"></i> Highland Park • 
+                            <i class="far fa-calendar"></i> Reunited: June 15, 2026
+                        </p>
+                        <p class="story-text">
+                            "Rover went missing from our backyard on June 10. Thanks to the Paws & Found community, 
+                            someone spotted him near the park just 3 days later. The volunteers helped us coordinate 
+                            the search and we were able to bring him home safely. We're so grateful for this amazing 
+                            community!"
+                        </p>
+                        <div class="story-footer">
+                            <span>Reunited with <span class="pet-name">The Johnson Family</span></span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Share this story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 2 - Cigarette -->
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&h=400&fit=crop" 
+                             class="story-card-img" alt="Black cat reunited">
+                    </div>
+                    <div class="story-card-body">
+                        <span class="badge-reunited"><i class="fas fa-check-circle"></i> Reunited!</span>
+                        <h3>Cigarette Comes Back Home</h3>
+                        <p class="story-meta">
+                            <i class="fas fa-map-marker-alt"></i> Maple Street • 
+                            <i class="far fa-calendar"></i> Reunited: June 18, 2026
+                        </p>
+                        <p class="story-text">
+                            "Cigarette is an indoor cat who slipped out when we weren't paying attention. We were heartbroken 
+                            for days. But within 12 hours of posting on Paws & Found, our neighbor saw the post and 
+                            recognized her hiding under a porch two blocks away. This platform truly works!"
+                        </p>
+                        <div class="story-footer">
+                            <span>Reunited with <span class="pet-name">The Martinez Family</span></span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Share this story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 3 - Plushy -->
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=600&h=400&fit=crop" 
+                             class="story-card-img" alt="Beagle reunited">
+                    </div>
+                    <div class="story-card-body">
+                        <span class="badge-reunited"><i class="fas fa-check-circle"></i> Reunited!</span>
+                        <h3>Plushy's Big Adventure</h3>
+                        <p class="story-meta">
+                            <i class="fas fa-map-marker-alt"></i> Riverside Park • 
+                            <i class="far fa-calendar"></i> Reunited: June 20, 2026
+                        </p>
+                        <p class="story-text">
+                            "Plushy is an energetic beagle who loves to explore. He escaped during a walk and ran 
+                            straight into the woods. We were terrified, but the Paws & Found community organized a 
+                            search party. After 2 days of searching, a volunteer found him near the river, wet but 
+                            happy. We can't thank everyone enough!"
+                        </p>
+                        <div class="story-footer">
+                            <span>Reunited with <span class="pet-name">The Thompson Family</span></span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Share this story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 4 - Mochi -->
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=600&h=400&fit=crop" 
+                             class="story-card-img" alt="Orange tabby reunited">
+                    </div>
+                    <div class="story-card-body">
+                        <span class="badge-reunited"><i class="fas fa-check-circle"></i> Reunited!</span>
+                        <h3>Mochi's Miraculous Return</h3>
+                        <p class="story-meta">
+                            <i class="fas fa-map-marker-alt"></i> Oakwood Apartments • 
+                            <i class="far fa-calendar"></i> Reunited: June 22, 2026
+                        </p>
+                        <p class="story-text">
+                            "Mochi is an indoor cat who somehow got out of our apartment. We searched everywhere but 
+                            couldn't find her. Within hours of posting on Paws & Found, someone called to say they'd 
+                            seen an orange tabby near the Oakwood Apartments. She was hiding under a car, scared but 
+                            safe. We are eternally grateful!"
+                        </p>
+                        <div class="story-footer">
+                            <span>Reunited with <span class="pet-name">The Park Family</span></span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Share this story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 5 - Rocky -->
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://images.unsplash.com/photo-1568572933382-74d440642117?w=600&h=400&fit=crop" 
+                             class="story-card-img" alt="German Shepherd reunited">
+                    </div>
+                    <div class="story-card-body">
+                        <span class="badge-reunited"><i class="fas fa-check-circle"></i> Reunited!</span>
+                        <h3>Rocky's Return</h3>
+                        <p class="story-meta">
+                            <i class="fas fa-map-marker-alt"></i> Veterans Park • 
+                            <i class="far fa-calendar"></i> Reunited: June 24, 2026
+                        </p>
+                        <p class="story-text">
+                            "Rocky got spooked by fireworks and ran off during our evening walk. He's a big dog but 
+                            very gentle. We were worried sick for two days. Then we got a call from a volunteer who 
+                            had seen him wandering near the park. The community came together and we found him! 
+                            Paws & Found is truly a lifesaver."
+                        </p>
+                        <div class="story-footer">
+                            <span>Reunited with <span class="pet-name">The Wilson Family</span></span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Share this story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 6 - Coco -->
+            <div class="col-lg-6">
+                <div class="story-card">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=600&h=400&fit=crop" 
+                             class="story-card-img" alt="Cockatiel reunited">
+                    </div>
+                    <div class="story-card-body">
+                        <span class="badge-reunited"><i class="fas fa-check-circle"></i> Reunited!</span>
+                        <h3>Coco's Flight Home</h3>
+                        <p class="story-meta">
+                            <i class="fas fa-map-marker-alt"></i> Sunset Boulevard • 
+                            <i class="far fa-calendar"></i> Reunited: June 26, 2026
+                        </p>
+                        <p class="story-text">
+                            "Coco escaped through an open window. We were devastated. As a bird, we thought we'd 
+                            never see her again. But Paws & Found helped us spread the word. A kind stranger found 
+                            her perched on a tree branch and contacted us. Within 8 hours, Coco was back home, safe 
+                            and sound. We're so thankful!"
+                        </p>
+                        <div class="story-footer">
+                            <span>Reunited with <span class="pet-name">The Lee Family</span></span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Share this story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container">
+        <div class="cta-banner" style="background: linear-gradient(135deg, #5D9B9B, #4a7a7a); color: white; padding: 4rem 2rem; border-radius: 30px; margin: 2rem 0 3rem; text-align: center;">
+            <h2 style="font-weight: 800; font-size: 2.2rem;">Have a Success Story to Share?</h2>
+            <p style="opacity: 0.9; font-size: 1.1rem;">We'd love to feature your reunion and inspire others</p>
+            <a href="report-form.html" class="btn" style="padding: 14px 40px; font-weight: 700; border-radius: 50px; background-color: white; color: #5D9B9B; border: none;">
+                <i class="fas fa-share-alt"></i> Share Your Story
+            </a>
+        </div>
+        <
+    </section>
+
+    
 
     <footer class="footer">
         <div class="container">

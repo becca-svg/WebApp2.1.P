@@ -43,7 +43,7 @@
            ============================================ */
         .hero {
             background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.5)), 
-                        url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1600&h=600&fit=crop');
+                        url('images/Hero2.jpg');
             background-size: cover;
             background-position: center;
             min-height: 500px;
@@ -95,6 +95,37 @@
             margin-bottom: 1rem;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
             
+        }
+
+         /* ============================================
+           PAGE HERO
+           ============================================ */
+        .success-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.5)), 
+                        url('images/Hero2.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 3rem;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .success-hero h1 {
+            font-weight: 800;
+            font-size: 3rem;
+        }
+
+        .success-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
 
@@ -272,6 +303,104 @@
             font-weight: 600;
             margin-bottom: 0;
         }
+        /* ============================================
+           SUCCESS STORY CARDS
+           ============================================ */
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            margin-bottom: 2rem;
+            align-items: center;
+        
+        }
+
+        .story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+        }
+
+        .story-card-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .story-card-body {
+            padding: 1.8rem;
+        }
+
+        .story-card-body .badge-reunited {
+            background-color: #7CB518;
+            color: white;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .story-card-body h3 {
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+        }
+
+        .story-card-body .story-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .story-card-body .story-meta i {
+            color: #E87A5D;
+            margin-right: 4px;
+        }
+
+        .story-card-body .story-text {
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+
+        .story-card-body .story-footer {
+            margin-top: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .story-card-body .story-footer .pet-name {
+            font-weight: 700;
+            color: #E87A5D;
+        }
+
+        .story-card-body .story-footer .btn-outline-primary {
+            color: #E87A5D;
+            border-color: #E87A5D;
+            border-radius: 30px;
+            padding: 6px 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .story-card-body .story-footer .btn-outline-primary:hover {
+            background-color: #E87A5D;
+            border-color: #E87A5D;
+            color: white;
+        }
+
+
+       
+
 
 
           /* ============================================
@@ -438,20 +567,4 @@
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .testimonial-card {
-        padding: 25px;
-    }
-    
-    .testimonial-text {
-        font-size: 16px;
-    }
-    
-    .user-avatar {
-        width: 55px;
-        height: 55px;
-    }
 }
