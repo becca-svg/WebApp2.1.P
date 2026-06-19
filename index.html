@@ -14,7 +14,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Brand / Logo -->
             <a class="navbar-brand fw-bold text-primary" href="index.html"> 
                 <i class="fas fa-paw"></i> Paws & Found</a>
@@ -59,27 +59,138 @@
         <div class="container">
             <h1>Every Lost Pet Deserves <br>a Way Home</h1>
             <p>Join our community of 5,000+ volunteers reuniting lost pets with their families across the country.</p>
-            <div>
-                <a href="lost_pets.html" class="btn btn-primary">
-                    <i class="fas fa-search"></i> View Lost Pets
-                </a>
-                <a href="report_form.html" class="btn btn-outline-light">
-                    <i class="fas fa-plus-circle"></i> Report a Pet
-                </a>
+                <div>
+                    <a href="lost_pets.html" class="btn btn-primary">
+                        <i class="fas fa-search"></i> View Lost Pets
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <section class="container about-section">
+        <div class="row align-items-center g-4">
+            <div class="col-md-6">
+                <h2>About Paws & Found</h2>
+                <p>Founded in 2024, Paws & Found is a community-driven platform dedicated to reuniting lost pets with their families. Our volunteers work tirelessly to ensure that every lost pet finds its way home.</p>
+                <p>We believe that pets are family, and no one should have to face the heartbreak of losing a beloved companion alone. Join us in our mission to make sure every lost pet has a chance to come back home.</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container stats-section">
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <h3>1,247</h3>
+                    <p>Pets Reunited</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <h3>5,832</h3>
+                    <p>Active Volunteers</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <h3>156</h3>
+                    <p>Cities Covered</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stat-card">
+                    <h3>48hrs</h3>
+                    <p>Avg. Recovery Time</p>
+                </div>
             </div>
         </div>
     </section>
 
 
 
-    <div class ="container">
-        <div class ="content-holder">
-            <h1>🐾 Welcome to Paws & Found</h1>
-            <p class ="lead">Working as a community to reunite lost pets with their families</p>
-            <hr>
-            
+    <section class="container my-5">
+        <div class="text-center">
+            <h2 class="section-title">Urgently Missing</h2>
+            <p class="section-subtitle">These pets need your help to find their way home</p>
         </div>
-    </div>
+        
+        <div class="row g-4">
+            <!-- Pet Card 1 - Dog -->
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-card">
+                    <img src="images/max.jpg" 
+                         class="pet-card-img" alt="Golden Retriever">
+                    <div class="pet-card-body">
+                        <span class="pet-badge dog">🐕 Dog</span>
+                        <h5>Max</h5>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Highland Park</p>
+                        <p class="text-muted small">Golden Retriever • Lost June 10</p>
+                        <a href="pet-detail.html?id=1" class="btn btn-outline-primary btn-sm">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Pet Card 2 - Cat -->
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-card">
+                    <img src="images/luna.jpg" 
+                         class="pet-card-img" alt="Black Cat">
+                    <div class="pet-card-body">
+                        <span class="pet-badge cat">🐈 Cat</span>
+                        <h5>Luna</h5>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Maple Street</p>
+                        <p class="text-muted small">Black cat • Lost June 12</p>
+                        <a href="pet-detail.html?id=2" class="btn btn-outline-primary btn-sm">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pet Card 3 - Dog -->
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-card">
+                    <img src="images/charlie.jpg" 
+                         class="pet-card-img" alt="Beagle">
+                    <div class="pet-card-body">
+                        <span class="pet-badge dog">🐕 Dog</span>
+                        <h5>Charlie</h5>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Riverside Park</p>
+                        <p class="text-muted small">Beagle mix • Lost June 13</p>
+                        <a href="pet-detail.html?id=3" class="btn btn-outline-primary btn-sm">
+                            View Details →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="lost-pets.html" class="btn btn-primary">
+                View All Lost Pets <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="container">
+        <div class="cta-banner">
+            <h2>🐾 Lost a Pet? Don't Panic.</h2>
+            <p>Report instantly and our network of volunteers will help you find them.</p>
+            <a href="report_form.html" class="btn">
+                <i class="fas fa-plus-circle"></i> Report a Lost Pet
+            </a>
+        </div>
+    </section>
+    
 
     <footer class="footer">
         <div class="container">
@@ -87,7 +198,7 @@
                 <!-- Column 1: Brand -->
                 <div class="col-md-4">
                     <h5><i class="fas fa-paw"></i> Paws & Found</h5>
-                    <p>Reuniting lost pets with their families since 2020. We're a community-driven platform dedicated to bringing pets home.</p>
+                    <p>Reuniting lost pets with their families since 2024. We're a community-driven platform dedicated to bringing pets home.</p>
                     <div class="social-links mt-3">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -109,7 +220,7 @@
                     </ul>
                 </div>
 
-                <!-- Column 3: Contact -->
+                <!-- Column 3: Contacts -->
                 <div class="col-md-4">
                     <h5>Get in Touch</h5>
                     <ul>
