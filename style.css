@@ -127,6 +127,29 @@
             max-width: 600px;
             margin: 0 auto;
         }
+        /* ============================================
+           PAGE HERO
+           ============================================ */
+        .report-hero {
+            background: linear-gradient(135deg, #E87A5D, #d45a3a);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 30px 30px;
+            text-align: center;
+        }
+
+        .report-hero h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+        }
+
+        .report-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
 
          /* ============================================
@@ -308,13 +331,13 @@
            ============================================ */
         .story-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 30px;
             overflow: hidden;
             box-shadow: 0 5px 25px rgba(0,0,0,0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
-            margin-bottom: 2rem;
-            align-items: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
         
         }
 
@@ -397,10 +420,141 @@
             border-color: #E87A5D;
             color: white;
         }
+        /* ============================================
+           FORM CARD
+           ============================================ */
+        .form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
 
+        .form-card .form-label {
+            font-weight: 600;
+            color: #2C3E50;
+        }
 
-       
+        .form-card .form-label .required {
+            color: #E87A5D;
+            margin-left: 3px;
+        }
 
+        .form-control, .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 12px 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #E87A5D;
+            box-shadow: 0 0 0 0.25rem rgba(232, 122, 93, 0.25);
+        }
+
+        .form-control.is-invalid, .form-select.is-invalid {
+            border-color: #dc3545;
+            background-image: none;
+        }
+
+        .form-control.is-valid, .form-select.is-valid {
+            border-color: #7CB518;
+        }
+
+        .invalid-feedback {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #7CB518, #5d8a12);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .success-message i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message h3 {
+            font-weight: 700;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }/* ============================================
+           SUBMIT BUTTON
+           ============================================ */
+        .btn-submit {
+            background-color: #E87A5D;
+            border: none;
+            color: white;
+            padding: 14px 40px;
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #d45a3a;
+            transform: translateY(-2px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .btn-submit i {
+            margin-right: 8px;
+        }
+
+        /* ============================================
+           INFO BOXES
+           ============================================ */
+        .info-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #E87A5D;
+        }
+
+        .info-box i {
+            color: #E87A5D;
+            font-size: 1.5rem;
+            margin-right: 12px;
+        }
+
+        .info-box h5 {
+            font-weight: 700;
+            color: #2C3E50;
+        }
+
+        .info-box p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
 
 
           /* ============================================
