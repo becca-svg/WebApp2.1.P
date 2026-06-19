@@ -127,30 +127,7 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        /* ============================================
-           PAGE HERO
-           ============================================ */
-        .report-hero {
-            background: linear-gradient(135deg, #E87A5D, #d45a3a);
-            color: white;
-            padding: 3rem 0;
-            margin-bottom: 3rem;
-            border-radius: 0 0 30px 30px;
-            text-align: center;
-        }
-
-        .report-hero h1 {
-            font-weight: 800;
-            font-size: 2.8rem;
-        }
-
-        .report-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
+        
 
          /* ============================================
            FEATURED PETS GRID
