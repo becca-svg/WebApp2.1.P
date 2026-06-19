@@ -52,14 +52,176 @@
     </nav>
 
 
-    <div class ="container">
-        <div class ="content-holder">
-            <h1>🐾 Welcome to Paws & Found</h1>
-            <p class ="lead">Working as a community to reunite lost pets with their families</p>
-            <hr>
-            
+     <section class="success-hero">
+        <div class="container">
+            <h1>📋 Report a Lost or Found Pet</h1>
+            <p>Fill out the form below and our community of 5,000+ volunteers will help spread the word.</p>
         </div>
-    </div>
+    </section>
+
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <!-- Info Box -->
+                <div class="info-box">
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h5>Before you start</h5>
+                            <p>Please provide as much detail as possible. The more information you share, the faster we can help reunite pets with their families.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="form-card">
+                    <form id="reportForm" novalidate>
+                        
+                        <!-- Report Type -->
+                        <div class="mb-4">
+                            <label for="reportType" class="form-label">
+                                Report Type <span class="required">*</span>
+                            </label>
+                            <select class="form-select" id="reportType" required>
+                                <option value="">Select one...</option>
+                                <option value="lost">I LOST my pet</option>
+                                <option value="found">I FOUND a pet</option>
+                            </select>
+                            <div class="invalid-feedback">Please select whether you lost or found a pet.</div>
+                        </div>
+
+                        <!-- Pet Name -->
+                        <div class="mb-4">
+                            <label for="petName" class="form-label">
+                                Pet's Name <span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="petName" 
+                                   placeholder="e.g., Maxxy, Lulu, Coco" required>
+                            <div class="invalid-feedback">Please provide your pet's name.</div>
+                        </div>
+
+                        <!-- Species -->
+                        <div class="mb-4">
+                            <label for="species" class="form-label">
+                                Species <span class="required">*</span>
+                            </label>
+                            <select class="form-select" id="species" required>
+                                <option value="">Select species...</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="bird">Bird</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="invalid-feedback">Please select your pet's species.</div>
+                        </div>
+
+                        <!-- Breed / Description -->
+                        <div class="mb-4">
+                            <label for="breed" class="form-label">
+                                Breed / Description <span class="required">*</span>
+                            </label>
+                            <textarea class="form-control" id="breed" rows="3" 
+                                      placeholder="e.g., Golden Retriever, white with brown spots, wearing a blue collar" required></textarea>
+                            <div class="invalid-feedback">Please describe your pet's breed and appearance.</div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="mb-4">
+                            <label for="location" class="form-label">
+                                Last Seen / Found Location <span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="location" 
+                                   placeholder="e.g., Highland Park, near the dog run" required>
+                            <div class="invalid-feedback">Please provide the location where the pet was lost or found.</div>
+                        </div>
+
+                        <!-- Date -->
+                        <div class="mb-4">
+                            <label for="date" class="form-label">
+                                Date <span class="required">*</span>
+                            </label>
+                            <input type="date" class="form-control" id="date" required>
+                            <div class="invalid-feedback">Please select the date.</div>
+                        </div>
+
+                        <!-- Contact Name -->
+                        <div class="mb-4">
+                            <label for="contactName" class="form-label">
+                                Your Name <span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="contactName" 
+                                   placeholder="e.g., Norah Okeyo" required>
+                            <div class="invalid-feedback">Please provide your name.</div>
+                        </div>
+
+                        <!-- Contact Email -->
+                        <div class="mb-4">
+                            <label for="contactEmail" class="form-label">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <input type="email" class="form-control" id="contactEmail" 
+                                   placeholder="e.g., norah@example.com" required>
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                        </div>
+
+                        <!-- Contact Phone -->
+                        <div class="mb-4">
+                            <label for="contactPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="contactPhone" 
+                                   placeholder="e.g., +254 700 123 456">
+                        </div>
+
+                        <!-- Photo Upload (optional) -->
+                        <div class="mb-4">
+                            <label for="petPhoto" class="form-label">Upload a Photo (optional)</label>
+                            <input type="file" class="form-control" id="petPhoto" accept="image/*">
+                            <div class="form-text">Upload a clear photo of the pet to help with identification.</div>
+                        </div>
+
+                        <!-- Additional Info -->
+                        <div class="mb-4">
+                            <label for="additionalInfo" class="form-label">Additional Information</label>
+                            <textarea class="form-control" id="additionalInfo" rows="3" 
+                                      placeholder="Any other details that might help..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Report
+                        </button>
+
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Report Submitted! ✅</h3>
+                        <p>Thank you for submitting your report. Our team will review it and post it within 2 hours.</p>
+                        <p class="mb-0"><small>We'll contact you at your provided email or phone number.</small></p>
+                        <button class="btn btn-light mt-3" onclick="location.reload()">
+                            <i class="fas fa-plus-circle"></i> Submit Another Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Emergency Tip -->
+                <div class="info-box" style="border-left-color: #dc3545;">
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-exclamation-triangle" style="color: #dc3545;"></i>
+                        <div>
+                            <h5>🚨 Emergency?</h5>
+                            <p>If you've found an injured pet or need immediate assistance, please call your local animal control or emergency vet immediately.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <footer class="footer">
         <div class="container">
