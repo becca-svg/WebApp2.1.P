@@ -9,6 +9,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 992px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            .pet-detail-panel .pet-image {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            .page-hero p {
+                font-size: 1rem;
+            }
+            .pet-detail-panel {
+                padding: 1.5rem;
+            }
+            .pet-detail-panel .pet-image {
+                height: 220px;
+            }
+            .pet-detail-panel .pet-name {
+                font-size: 1.6rem;
+            }
+            .pet-detail-panel .detail-item {
+                flex-direction: column;
+            }
+            .pet-detail-panel .detail-item .label {
+                width: 100%;
+                margin-bottom: 4px;
+            }
+            .footer {
+                padding: 2rem 0 1rem;
+                border-radius: 20px 20px 0 0;
+            }
+            .footer .col-md-4 {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero {
+                padding: 2rem 0;
+                border-radius: 0 0 20px 20px;
+            }
+            .page-hero h1 {
+                font-size: 1.5rem;
+            }
+            .pet-card-img {
+                height: 180px;
+            }
+            .pet-detail-panel .pet-image {
+                height: 180px;
+            }
+        }
+
+    </style>
+
+
 </head>
 <body>
 
@@ -50,16 +111,260 @@
             </div>
         </div>
     </nav>
-    <main>
-    <div class ="container">
-        <div class ="content-holder">
-            <h1>🐾 Welcome to Paws & Found</h1>
-            <p class ="lead">Working as a community to reunite lost pets with their families</p>
-            <hr>
-            
+<main>
+    <section class="success-hero">
+        <div class="container">
+            <h1>🐾 Lost Pets in Your Area</h1>
+            <p>Click on any pet card to see their full details and help reunite them with their family.</p>
         </div>
-    </div>
+    </section>
+
+    <section class="container">
+        <div class="row g-4">
+            
+            <!-- Max - Card -->
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-card" onclick="showPet('max')">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop" 
+                         class="pet-card-img" alt="Max">
+                    <div class="pet-card-body">
+                        <span class="pet-badge dog">🐕 Dog</span>
+                        <h5>Max</h5>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Highland Park</p>
+                        <p class="text-muted small">Golden Retriever • Lost June 10</p>
+                        <button class="btn-view">View Details →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luna - Card -->
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-card" onclick="showPet('luna')">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=300&fit=crop" 
+                         class="pet-card-img" alt="Luna">
+                    <div class="pet-card-body">
+                        <span class="pet-badge cat">🐈 Cat</span>
+                        <h5>Luna</h5>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Maple Street</p>
+                        <p class="text-muted small">Black Cat • Lost June 12</p>
+                        <button class="btn-view">View Details →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charlie - Card -->
+            <div class="col-md-4 col-sm-6">
+                <div class="pet-card" onclick="showPet('charlie')">
+                    <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=400&h=300&fit=crop" 
+                         class="pet-card-img" alt="Charlie">
+                    <div class="pet-card-body">
+                        <span class="pet-badge dog">🐕 Dog</span>
+                        <h5>Charlie</h5>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Riverside Park</p>
+                        <p class="text-muted small">Beagle Mix • Lost June 13</p>
+                        <button class="btn-view">View Details →</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container">
+        
+        <!-- MAX DETAIL -->
+        <div class="pet-detail-panel" id="detail-max">
+            <button class="close-btn" onclick="closeDetail('max')">&times;</button>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&h=600&fit=crop" 
+                         class="pet-image" alt="Max">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="pet-name">Max</h2>
+                    <span class="status-badge lost">🐕 Lost</span>
+                    <p class="text-muted small mt-2">Reported: June 10, 2026</p>
+                    
+                    <div class="mt-3">
+                        <div class="detail-item">
+                            <span class="label">Species</span>
+                            <span class="value">Golden Retriever</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Location</span>
+                            <span class="value">Highland Park, near the dog run</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Age</span>
+                            <span class="value">3 years old</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Gender</span>
+                            <span class="value">Male (Neutered)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Collar</span>
+                            <span class="value">Blue with silver ID tag</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Microchip</span>
+                            <span class="value">9812345678</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <p><strong>Description:</strong> Friendly Golden Retriever, responds to "Max". Wearing a blue collar with a silver ID tag. Microchipped. Very friendly with people and other dogs.</p>
+                    </div>
+
+                    <div class="contact-box mt-3">
+                        <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i> Sarah Johnson
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> sarah.johnson@example.com
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i> (555) 123-4567
+                        </div>
+                        <a href="report_form.html" class="btn-sighting mt-2">
+                            <i class="fas fa-eye"></i> I've Seen This Pet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LUNA DETAIL -->
+        <div class="pet-detail-panel" id="detail-luna">
+            <button class="close-btn" onclick="closeDetail('luna')">&times;</button>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800&h=600&fit=crop" 
+                         class="pet-image" alt="Luna">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="pet-name">Luna</h2>
+                    <span class="status-badge lost">🐈 Lost</span>
+                    <p class="text-muted small mt-2">Reported: June 12, 2026</p>
+                    
+                    <div class="mt-3">
+                        <div class="detail-item">
+                            <span class="label">Species</span>
+                            <span class="value">Black Cat</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Location</span>
+                            <span class="value">Maple Street, near Oakwood Apartments</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Age</span>
+                            <span class="value">3 years old</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Gender</span>
+                            <span class="value">Female (Spayed)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Collar</span>
+                            <span class="value">Pink with silver bell</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Microchip</span>
+                            <span class="value">9812345678</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <p><strong>Description:</strong> Beautiful all-black cat with bright green eyes. Indoor cat, shy but gentle. She loves to hide in small spaces.</p>
+                    </div>
+
+                    <div class="contact-box mt-3">
+                        <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i> Maria Martinez
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> maria.martinez@example.com
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i> (555) 345-6789
+                        </div>
+                        <a href="report_form.html" class="btn-sighting mt-2">
+                            <i class="fas fa-eye"></i> I've Seen This Pet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHARLIE DETAIL -->
+        <div class="pet-detail-panel" id="detail-charlie">
+            <button class="close-btn" onclick="closeDetail('charlie')">&times;</button>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=800&h=600&fit=crop" 
+                         class="pet-image" alt="Charlie">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="pet-name">Charlie</h2>
+                    <span class="status-badge lost">🐕 Lost</span>
+                    <p class="text-muted small mt-2">Reported: June 13, 2026</p>
+                    
+                    <div class="mt-3">
+                        <div class="detail-item">
+                            <span class="label">Species</span>
+                            <span class="value">Beagle Mix</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Location</span>
+                            <span class="value">Riverside Park, near the pond</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Age</span>
+                            <span class="value">2 years old</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Gender</span>
+                            <span class="value">Male (Neutered)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Collar</span>
+                            <span class="value">Red with bone-shaped tag</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Microchip</span>
+                            <span class="value">9812345679</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <p><strong>Description:</strong> Playful and energetic Beagle mix. Loves to explore and follow scents. Very friendly and loves treats, especially cheese!</p>
+                    </div>
+
+                    <div class="contact-box mt-3">
+                        <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i> Tom Thompson
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> tom.thompson@example.com
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i> (555) 234-5678
+                        </div>
+                        <a href="report_form.html" class="btn-sighting mt-2">
+                            <i class="fas fa-eye"></i> I've Seen This Pet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </main>
+
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
@@ -116,6 +421,50 @@
             </div>
         </div>
     </footer>
+
+    <!--JAVASCRIPT-->
+    <script>
+        // Show pet detail panel
+        function showPet(petId) {
+            // Hide all panels
+            document.querySelectorAll('.pet-detail-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Show the selected panel
+            const panel = document.getElementById('detail-' + petId);
+            if (panel) {
+                panel.classList.add('active');
+                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Close pet detail panel
+        function closeDetail(petId) {
+            const panel = document.getElementById('detail-' + petId);
+            if (panel) {
+                panel.classList.remove('active');
+            }
+        }
+
+        // Close panel when clicking outside (on the background)
+        document.addEventListener('click', function(event) {
+            // Check if click is on a pet card (which triggers showPet)
+            if (event.target.closest('.pet-card')) {
+                return; // Let the card's onclick handle it
+            }
+            
+            // Check if click is inside a detail panel
+            if (event.target.closest('.pet-detail-panel')) {
+                return; // Don't close if clicking inside
+            }
+            
+            // Close all panels when clicking elsewhere
+            document.querySelectorAll('.pet-detail-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+        });
+    </script>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
