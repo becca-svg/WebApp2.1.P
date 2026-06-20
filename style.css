@@ -185,6 +185,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
+            cursor: pointer;
         }
 
         .pet-card:hover {
@@ -259,6 +260,155 @@
             border-color: #E87A5D;
             color: white;
             
+        }
+
+         .pet-card-body .btn-view {
+            color: #E87A5D;
+            border-color: #E87A5D;
+            border-radius: 30px;
+            padding: 6px 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            background: transparent;
+            border: 2px solid #E87A5D;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .pet-card-body .btn-view:hover {
+            background-color: #E87A5D;
+            border-color: #E87A5D;
+            color: white;
+        }
+
+         /* ============================================
+           PET DETAIL PANEL (Opens below)
+           ============================================ */
+        .pet-detail-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .pet-detail-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pet-detail-panel .pet-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .pet-detail-panel .close-btn {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #6c757d;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .pet-detail-panel .close-btn:hover {
+            color: #dc3545;
+        }
+
+        .pet-detail-panel .pet-name {
+            font-weight: 800;
+            font-size: 2rem;
+            color: #2C3E50;
+        }
+
+        .pet-detail-panel .status-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge.lost {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .pet-detail-panel .detail-item {
+            display: flex;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .pet-detail-panel .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .pet-detail-panel .detail-item .label {
+            font-weight: 600;
+            color: #2C3E50;
+            width: 140px;
+            flex-shrink: 0;
+        }
+
+        .pet-detail-panel .detail-item .value {
+            color: #4a4a4a;
+        }
+
+        .pet-detail-panel .contact-box {
+            background: linear-gradient(135deg, #FDF8F5, #f5ebe6);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border-left: 4px solid #E87A5D;
+        }
+
+        .pet-detail-panel .contact-box .contact-item {
+            margin-bottom: 0.6rem;
+        }
+
+        .pet-detail-panel .contact-box .contact-item i {
+            color: #E87A5D;
+            width: 24px;
+            margin-right: 8px;
+        }
+
+        .btn-sighting {
+            background-color: #E87A5D;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-sighting:hover {
+            background-color: #d45a3a;
+            color: white;
+        }
+
+        .btn-sighting i {
+            margin-right: 8px;
         }
         /* ============================================
            ABOUT SECTION
