@@ -933,3 +933,54 @@
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
 }
 
+/* ============================================
+   SECTION BADGE
+   ============================================ */
+.section-badge {
+    display: inline-block;
+    background-color: #f5ebe6;
+    color: #E87A5D;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   STEP NUMBER (How to Help guide)
+   ============================================ */
+.step-number {
+    display: inline-block;
+    background-color: #E87A5D;
+    color: white;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   CHECKBOX GROUP ERROR (Volunteer form)
+   ============================================ */
+.checkbox-error {
+    display: none;
+    color: #dc3545;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-error.show {
+    display: block;
+}
+
+.form-check-input:checked {
+    background-color: #E87A5D;
+    border-color: #E87A5D;
+}
