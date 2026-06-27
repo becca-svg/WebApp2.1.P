@@ -1,8 +1,21 @@
+         *{
+            box-sizing: border-box;
+         }
+
          body {
             font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #FDF8F5;
             color: #2C3E50;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+           
         }
+
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera, new Edge */
+}
 
         /* ============================================
            NAVIGATION BAR (already built)
@@ -137,7 +150,7 @@
          /* ============================================
            PAGE HERO
            ============================================ */
-        .success-hero {
+        .hero {
             background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.5)), 
                         url('images/Hero2.jpg');
             background-size: cover;
@@ -153,17 +166,45 @@
             border-radius: 0 0 30px 30px;
         }
 
-        .success-hero h1 {
+        .hero h1 {
             font-weight: 800;
             font-size: 3rem;
         }
 
-        .success-hero p {
+        .hero p {
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
+
+        @media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+    }
+}
         
 
          /* ============================================
@@ -353,6 +394,11 @@
             background-color: #dc3545;
             color: white;
         }
+
+       .status-badge.found {
+            background-color: #5D9B9B;
+            color: white;
+} 
 
         .pet-detail-panel .detail-item {
             display: flex;
@@ -886,3 +932,4 @@
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
 }
+
