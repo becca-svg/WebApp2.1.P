@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Paws & Found | reuniting lost pets with their families</title>
+    <title>Paws & Found | How to Help</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -52,14 +52,186 @@
     </nav>
     
     <main>
-    <div class ="container">
-        <div class ="content-holder">
-            <h1>🐾 Welcome to Paws & Found</h1>
-            <p class ="lead">Working as a community to reunite lost pets with their families</p>
-            <hr>
-            
-        </div>
-    </div>
+        <section class="hero">
+            <div class="container">
+                <h1>How You Can Help</h1>
+                <p>Whether you've just found a wandering pet or want to join our volunteer network, here's where to start.</p>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <div class="text-center mb-5">
+                <span class="section-badge">Found a Pet?</span>
+                <h2 class="section-title">Here's What To Do</h2>
+                <p class="section-subtitle">Five quick steps to help get them home safely</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="mission-card text-center">
+                        <span class="step-number">1</span>
+                        <div class="mission-icon mb-3">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h5>Stay Calm & Approach Slowly</h5>
+                        <p>Move slowly and speak softly. A scared pet that's chased is more likely to run further away.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mission-card text-center">
+                        <span class="step-number">2</span>
+                        <div class="mission-icon mb-3">
+                            <i class="fas fa-id-badge"></i>
+                        </div>
+                        <h5>Check for ID</h5>
+                        <p>Look for a collar, tag, or anything with an owner's name or phone number on it.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mission-card text-center">
+                        <span class="step-number">3</span>
+                        <div class="mission-icon mb-3">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h5>Get Them Scanned</h5>
+                        <p>Most vet clinics and shelters will scan for a microchip for free, no appointment needed.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mission-card text-center">
+                        <span class="step-number">4</span>
+                        <div class="mission-icon mb-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Keep Them Safe</h5>
+                        <p>If you can safely contain them, keep them somewhere secure and away from traffic.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mission-card text-center">
+                        <span class="step-number">5</span>
+                        <div class="mission-icon mb-3">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h5>Report It Here</h5>
+                        <p>Submit a Found Pet report so our volunteer network — and the owner — can find you fast.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="report_form.html" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Report a Found Pet
+                </a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- VOLUNTEER SIGN-UP -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="text-center mb-5">
+                        <span class="section-badge">Join Us</span>
+                        <h2 class="section-title">Become a Volunteer</h2>
+                        <p class="section-subtitle">Tell us how you'd like to help — we'll be in touch</p>
+                    </div>
+
+                    <div class="form-card">
+                        <form id="volunteerForm" novalidate>
+
+                            <!-- Name -->
+                            <div class="mb-4">
+                                <label for="volunteerName" class="form-label">
+                                    Full Name <span class="required">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="volunteerName"
+                                       placeholder="e.g., Amina Wanjiru" required>
+                                <div class="invalid-feedback">Please provide your name.</div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <label for="volunteerEmail" class="form-label">
+                                    Email Address <span class="required">*</span>
+                                </label>
+                                <input type="email" class="form-control" id="volunteerEmail"
+                                       placeholder="e.g., amina@example.com" required>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="mb-4">
+                                <label for="volunteerPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="volunteerPhone"
+                                       placeholder="e.g., +254 700 123 456">
+                            </div>
+
+                            <!-- Interests -->
+                            <div class="mb-4">
+                                <label class="form-label">
+                                    How would you like to help? <span class="required">*</span>
+                                </label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input volunteer-interest" type="checkbox" value="foster" id="interestFoster">
+                                    <label class="form-check-label" for="interestFoster">Foster a found pet</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input volunteer-interest" type="checkbox" value="search" id="interestSearch">
+                                    <label class="form-check-label" for="interestSearch">Search & flyer distribution</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input volunteer-interest" type="checkbox" value="sightings" id="interestSightings">
+                                    <label class="form-check-label" for="interestSightings">Report sightings in my area</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input volunteer-interest" type="checkbox" value="transport" id="interestTransport">
+                                    <label class="form-check-label" for="interestTransport">Transport (vet/shelter/foster runs)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input volunteer-interest" type="checkbox" value="microchip" id="interestMicrochip">
+                                    <label class="form-check-label" for="interestMicrochip">Microchip scanning</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input volunteer-interest" type="checkbox" value="other" id="interestOther">
+                                    <label class="form-check-label" for="interestOther">Something else</label>
+                                </div>
+
+                                <div class="checkbox-error" id="interestsError">Please select at least one way you'd like to help.</div>
+                            </div>
+
+                            <!-- Notes -->
+                            <div class="mb-4">
+                                <label for="volunteerNotes" class="form-label">Anything else we should know?</label>
+                                <textarea class="form-control" id="volunteerNotes" rows="3"
+                                          placeholder="Availability, experience with animals, areas you cover..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-hand-holding-heart"></i> Sign Up to Volunteer
+                            </button>
+
+                        </form>
+
+                        <!-- Success Message -->
+                        <div class="success-message" id="volunteerSuccessMessage">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Thank You! 🙌</h3>
+                            <p>You're on the list. We'll reach out about opportunities that match how you'd like to help.</p>
+                            <button class="btn btn-light mt-3" onclick="location.reload()">
+                                <i class="fas fa-plus-circle"></i> Sign Up Another Volunteer
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
     </main>
     <footer class="footer">
         <div class="container">
