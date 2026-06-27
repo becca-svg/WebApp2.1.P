@@ -39,8 +39,30 @@ window.PawsData = (function () {
         return reports;
     }
 
-    return { getReports, getReportsByType, addReport };
-})();
+const VOLUNTEER_KEY = 'pawsAndFoundVolunteers';
+
+    function getVolunteers() {
+        try {
+            const raw = localStorage.getItem(VOLUNTEER_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch (err) {
+            console.error('Could not read saved volunteers:', err);
+            return [];
+        }
+    }
+
+    function addVolunteer(volunteer) {
+        const volunteers = getVolunteers();
+        volunteers.push(volunteer);
+        try {
+            localStorage.setItem(VOLUNTEER_KEY, JSON.stringify(volunteers));
+        } catch (err) {
+            console.error('Could not save volunteer signup:', err);
+        }
+        return volunteers;
+    }
+
+    return { getReports, getReportsByType, addReport, getVolunteers, addVolunteer };})();
 
 
 /* ---------- 2. Pet Detail Panel Show/Hide ---------- */
@@ -288,3 +310,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+const VOLUNTEER_KEY = 'pawsAndFoundVolunteers';
+
+    function getVolunteers() {
+        try {
+            const raw = localStorage.getItem(VOLUNTEER_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch (err) {
+            console.error('Could not read saved volunteers:', err);
+            return [];
+        }
+    }
+
+    function addVolunteer(volunteer) {
+        const volunteers = getVolunteers();
+        volunteers.push(volunteer);
+        try {
+            localStorage.setItem(VOLUNTEER_KEY, JSON.stringify(volunteers));
+        } catch (err) {
+            console.error('Could not save volunteer signup:', err);
+        }
+        return volunteers;
+    }
+
+    return { getReports, getReportsByType, addReport, getVolunteers, addVolunteer };
