@@ -984,3 +984,25 @@
     background-color: #E87A5D;
     border-color: #E87A5D;
 }
+
+/* FAQ PAGE */
+.faq-category-title {
+    color: #2C3E50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.faq-category-title i {
+    color: #E87A5D;
+    margin-right: 8px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f5ebe6;
+    color: #E87A5D;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(232, 122, 93, 0.25);
+}
