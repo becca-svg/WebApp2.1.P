@@ -1,18 +1,8 @@
-/* ============================================
-   Paws & Found — App Scripts
-   Everything in one file. Each section guards
-   itself, so it's safe to include this on every
-   page even if that page doesn't use a section.
-
-   1. Shared local storage helper   (PawsData)
-   2. Pet detail panel show/hide    (lost_pets.html, found_pets.html)
-   3. Render saved reports as cards (lost_pets.html, found_pets.html)
-   4. Report form validation + save (report_form.html)
-   ============================================ */
 
 /* ---------- 1. Shared Local Storage Helper ---------- */
 window.PawsData = (function () {
     const STORAGE_KEY = 'pawsAndFoundReports';
+    const VOLUNTEER_KEY = 'pawsAndFoundVolunteers';
 
     function getReports() {
         try {
@@ -39,8 +29,6 @@ window.PawsData = (function () {
         return reports;
     }
 
-const VOLUNTEER_KEY = 'pawsAndFoundVolunteers';
-
     function getVolunteers() {
         try {
             const raw = localStorage.getItem(VOLUNTEER_KEY);
@@ -62,7 +50,8 @@ const VOLUNTEER_KEY = 'pawsAndFoundVolunteers';
         return volunteers;
     }
 
-    return { getReports, getReportsByType, addReport, getVolunteers, addVolunteer };})();
+    return { getReports, getReportsByType, addReport, getVolunteers, addVolunteer };
+})();
 
 
 /* ---------- 2. Pet Detail Panel Show/Hide ---------- */
@@ -310,27 +299,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-const VOLUNTEER_KEY = 'pawsAndFoundVolunteers';
 
-    function getVolunteers() {
-        try {
-            const raw = localStorage.getItem(VOLUNTEER_KEY);
-            return raw ? JSON.parse(raw) : [];
-        } catch (err) {
-            console.error('Could not read saved volunteers:', err);
-            return [];
-        }
+
+/* ---------- 5. Volunteer Sign-Up Form ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('volunteerForm');
+    if (!form) return; // only runs on how-to-help.html
+
+    const successMessage = document.getElementById('volunteerSuccessMessage');
+    const interestsError = document.getElementById('interestsError');
+    const interestCheckboxes = Array.from(form.querySelectorAll('.volunteer-interest'));
+    const requiredFields = Array.from(form.querySelectorAll('.form-control[required]'));
+
+    function validateField(field) {
+        const isValid = field.checkValidity();
+        const hasValue = field.value.trim() !== '';
+
+        field.classList.toggle('is-invalid', !isValid);
+        field.classList.toggle('is-valid', isValid && hasValue);
+
+        return isValid;
     }
 
-    function addVolunteer(volunteer) {
-        const volunteers = getVolunteers();
-        volunteers.push(volunteer);
-        try {
-            localStorage.setItem(VOLUNTEER_KEY, JSON.stringify(volunteers));
-        } catch (err) {
-            console.error('Could not save volunteer signup:', err);
-        }
-        return volunteers;
+    function validateInterests() {
+        const anyChecked = interestCheckboxes.some((box) => box.checked);
+        interestsError.classList.toggle('show', !anyChecked);
+        return anyChecked;
     }
 
-    return { getReports, getReportsByType, addReport, getVolunteers, addVolunteer };
+    requiredFields.forEach((field) => {
+        field.addEventListener('input', () => validateField(field));
+        field.addEventListener('change', () => validateField(field));
+    });
+
+    interestCheckboxes.forEach((box) => {
+        box.addEventListener('change', validateInterests);
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        let allValid = true;
+        let firstInvalidField = null;
+
+        requiredFields.forEach((field) => {
+            const isValid = validateField(field);
+            if (!isValid) {
+                allValid = false;
+                if (!firstInvalidField) firstInvalidField = field;
+            }
+        });
+
+        const interestsValid = validateInterests();
+        if (!interestsValid) {
+            allValid = false;
+            if (!firstInvalidField) firstInvalidField = interestCheckboxes[0];
+        }
+
+        if (!allValid) {
+            firstInvalidField.focus();
+            firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
+        }
+
+        const volunteer = {
+            id: 'vol_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+            name: document.getElementById('volunteerName').value.trim(),
+            email: document.getElementById('volunteerEmail').value.trim(),
+            phone: document.getElementById('volunteerPhone').value.trim(),
+            interests: interestCheckboxes.filter((box) => box.checked).map((box) => box.value),
+            notes: document.getElementById('volunteerNotes').value.trim(),
+        };
+
+        window.PawsData.addVolunteer(volunteer);
+
+        form.style.display = 'none';
+        successMessage.classList.add('show');
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
